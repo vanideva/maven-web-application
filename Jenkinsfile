@@ -14,7 +14,7 @@ node
     {
         sh "${mavenHome}/bin/mvn sonar:sonar"
     }
-     stage('Quality Gate')
+    /* stage('Quality Gate')
         {
             timeout(time: 1, unit: 'HOURS'){
                 def qg = waitForQualityGate()
@@ -23,6 +23,7 @@ node
                 }
             }
         }
+        */
     stage('EmailNotification')
     {
     emailext body: '''Build Over
